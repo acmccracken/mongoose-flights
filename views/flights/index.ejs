@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>flight List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Release Year</th>
+                <th>Rating</th>
+                <th>Cast</th>
+                <th>Now Showing</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% flight.forEach( (flight) => { %>
+                <tr>
+                    <td><%= flight.title %></td>
+                    <td><%= flight.releaseYear %></td>
+                    <td><%= flight.mpaaRating %></td>
+                    <td><%= flight.cast.join(', ') %></td>
+                    <td><%= flight.nowShowing ? 'Yes' : 'No' %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+  </body>
+</html>
