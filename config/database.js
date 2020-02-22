@@ -5,3 +5,9 @@ mongoose.connect('mongodb://localhost/flights', {
     useCreateIndex: true,
     useUnifiedTopology: true
 });
+
+const db = mongoose.connection;
+
+db.on('connected', () => {
+    console.log('Connected');
+})

@@ -11,21 +11,19 @@
     <table>
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Release Year</th>
-                <th>Rating</th>
-                <th>Cast</th>
-                <th>Now Showing</th>
+                <th>Airline</th>
+                <th>Flight No</th>
+                <th>Departure Date</th>
+                
             </tr>
         </thead>
         <tbody>
-            <% flight.forEach( (flight) => { %>
+            <% flights.forEach( (flight) => { %>
                 <tr>
-                    <td><%= flight.title %></td>
-                    <td><%= flight.releaseYear %></td>
-                    <td><%= flight.mpaaRating %></td>
-                    <td><%= flight.cast.join(', ') %></td>
-                    <td><%= flight.nowShowing ? 'Yes' : 'No' %></td>
+                    <td><%= flight.airline %></td>
+                    <td><%= flight.flightNo %></td>
+                    <td><%= flight.departs %></td>
+    
                 </tr>
             <% }); %>
         </tbody>
