@@ -7,11 +7,11 @@
 	<title>Document</title>
 </head>
 <body>
-	<h2>Enter a New Movie</h2>
-	<form action="/movies" method="POST">
+	<h2>FLIGHT STUFF</h2>
+	<form action="/flights" method="POST">
 		
 		<label>flightNo:
-			<input type="text" name="flightNo">
+			<input type="text" name="flightNum">
 		</label><br>
 		<label>airline
 			<select name="airline">
@@ -22,9 +22,19 @@
 		</label><br>
 		<label>Departure date/time:
 			<input type="datetime-local" name="departs">
-		</label><br>
+        </label><br>
+        <label> Airport:
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DAL">DAL</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select>
+        </label></br>
+        <button type="submit">This is a button and I do button things...and lie</button>
+        
 		
 	</form>
 </body>
 </html>
-\

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+    <tr>
+        <td>Flight No:</td>
+        <td><%= plane.flightNum %></td>
+    
+        <td>Arline: </td>
+        <td><%= plane.airline %></td>
+    
+        <td>Airport:</td>
+        <td><%= plane.airport %></td>
+    </tr>
+    </table>
+    <form action="/flights/<%= plane.id %>/destinations" method="POST">
+        <label> Airport:
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="DAL">DAL</option>
+                <option value="LAX">LAX</option>
+                <option value="SAN">SAN</option>
+            </select>
+        </label>
+        <label>Arrival date/time:
+			<input type="datetime-local" name="arrival">
+        </label></br>
+        <button type="submit">This is a button and I do button things...and lie</button>
+    </form>
+    <% plane.destinations.forEach(function(d){ %>
+        <div> <%= d.airport %></div>
+        <div> <%= d.arrival %></div>
+    <% } )%>
+<!--         
+    });
+     -->
+</body>
+</html>
