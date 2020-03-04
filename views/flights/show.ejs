@@ -37,6 +37,13 @@
         <div> <%= d.airport %></div>
         <div> <%= d.arrival %></div>
     <% } )%>
+    <% if(tickets.length) { %>
+    <% tickets.forEach(function(t){ %>
+        <div> <%= t.seat %></div>
+        <div> <%= t.price %></div>
+    <% } )%>
+    <% } %>
+    <a href="/flights/<%= plane.id %>/new"><button>Add a Ticket</button></a>
 <!--         
     });
      -->

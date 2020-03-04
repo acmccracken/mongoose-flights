@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/flights/<%= plane %>/tickets/" method="POST">
+        <label> Seat:
+            <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
+        </label>
+        <label>Price:
+			<input type="text" name="price">
+        </label></br>
+        <button type="submit">This is a button and I do button things...and lie</button>
+    </form>
+</body>
+</html>
